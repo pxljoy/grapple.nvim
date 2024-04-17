@@ -12,7 +12,7 @@ local function create_finder()
         if tag then
             print(tag.cursor)
             print(tag.path)
-            if ~tag.cursor then
+            if tag.cursor == nil then
                 tag.cursor = {}
             end
         ---@class grapple.telescope.result
