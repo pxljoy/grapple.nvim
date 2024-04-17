@@ -9,15 +9,17 @@ local function create_finder()
 
     local results = {}
     for i, tag in ipairs(tags) do
+        if tag then
         ---@class grapple.telescope.result
-        local result = {
-            i,
-            tag.path,
-            tag.cursor[1],
-            tag.cursor[2],
-        }
-
-        table.insert(results, result)
+            local result = {
+                i,
+                tag.path,
+                tag.cursor[1],
+                tag.cursor[2],
+            }
+    
+            table.insert(results, result)
+        end
     end
 
     return require("telescope.finders").new_table({
