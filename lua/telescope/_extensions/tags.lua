@@ -10,8 +10,6 @@ local function create_finder()
     local results = {}
     for i, tag in ipairs(tags) do
         if tag then
-            print(tag.cursor)
-            print(tag.path)
             if tag.cursor == nil then
                 tag.cursor = {}
             end
